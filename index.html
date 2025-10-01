@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Turnos Médicos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Simulador de Turnos Médicos</h1>
+    </header>
+    
+  <main>
+
+    <section>
+      <h2>Solicitar turno</h2>
+      <form id="form-turno">
+        <label for="medico">Médico:</label>
+        <select id="medico" required></select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required min="">
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" required>
+
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+
+    <!-- Lista dinámica de turnos -->
+    <section>
+      <h2>Mis turnos</h2>
+      <ul id="lista-turnos"></ul>
+      <button id="vaciar">Cancelar todos</button>
+    </section>
+  </main>
+
+</body>
+</html>
