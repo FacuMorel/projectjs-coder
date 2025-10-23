@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador de Turnos Médicos</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="script.js" defer></script>
 </head>
 <body>
@@ -16,17 +17,34 @@
 
     <section>
       <h2>Solicitar turno</h2>
+      <div id="mensaje-area" class="mensaje" style="display: none;"></div>
       <form id="form-turno">
-        <label for="medico">Médico:</label>
-        <select id="medico" required></select>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required placeholder="Ingrese su nombre" minlength="2" maxlength="50">
+        </div>
 
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" required min="">
+        <div class="form-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" required placeholder="Ingrese su apellido" minlength="2" maxlength="50">
+        </div>
 
-        <label for="hora">Hora:</label>
-        <input type="time" id="hora" required>
+        <div class="form-group">
+          <label for="medico">Médico:</label>
+          <select id="medico" required></select>
+        </div>
 
-        <button type="submit">Reservar</button>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" required min="">
+        </div>
+
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" required>
+        </div>
+
+        <button type="submit" disabled>Reservar Turno</button>
       </form>
     </section>
 
